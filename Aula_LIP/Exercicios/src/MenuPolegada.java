@@ -9,7 +9,7 @@ public class MenuPolegada {
         System.out.println("2 para Centimetros -> Polegadas");
         System.out.println("==========================================================");
         System.out.println("Escolha uma Opção");
-        int numero = scan.nextInt();
+        int numero = scan.nextInt() ;
 
         if (numero == 1) {
             System.out.println("Transformando polegadas para centimetros");
