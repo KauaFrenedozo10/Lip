@@ -1,32 +1,51 @@
+import java.util.Arrays;
 import java.util.Random;
+import java.util.Scanner;
 
 public class BinarySearch {
     public static void main(String[] args) {
         
-        int myNumber = 14;
+        Scanner scan = new Scanner(System.in);
+        int [] array = new int[10];
+        
 
-        for(int i = 0; i < 10; i++) {
-            int numeroAl = (int) (1 + Math.random() * 1000);
-             System.out.println(numeroAl);
+       
 
-            int [] myArray = { numeroAl};
-
-            int left = 0;
-            int right = myArray.length - 1;
-
-             while (left <= right) {
-                int mid = (left + right) / 2;
+        System.out.println(array);
+        
+        for (int i = 0; i < array.length; i++) {
+            array[i] = (int) (1 + Math.random() * 100);
         }
+        System.out.println(Arrays.toString(array));
+        System.out.println("Insira um numero");
+        int numeroAl = scan.nextInt();
+
+        Arrays.sort(array);
+
+       
+
+        int inicio = 0;
+        int fim = array.length - 1;
+
+        while (inicio <= fim) {
+            int meio = inicio + fim/2;
+
+         if (array[meio] == numeroAl) {
+                System.out.println("Encontrado");
+                System.out.println(meio);
+                break;
+            }else { 
+                System.out.println("n econtrado");
+                System.out.println(meio);
+                break;
+            }  
 
         }
+         
         
-       
-        
-        
-       
-
-       
-
 
     }
 }
+
+
+
